@@ -1,5 +1,5 @@
 const CACHE_PREFIX = 'cpg08-shopping-assistant-';
-const CACHE_NAME = `${CACHE_PREFIX}ios-pwa-v2`;
+const CACHE_NAME = `${CACHE_PREFIX}ios-pwa-v4`;
 const APP_SHELL = [
   './index_ios.html',
   './manifest.webmanifest',
