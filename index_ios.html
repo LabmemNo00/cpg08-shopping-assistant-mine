@@ -2334,8 +2334,9 @@
 
     function normalizeBoothRaw(raw) {
       raw = String(raw || '').trim().replace(/\s+/g, '');
-      return raw.replace(/([壹贰叁肆伍1-5])([A-Za-z])/g, (m, h, r) => (HALL_NUMBER_TO_CHAR[h] || h) + r.toUpperCase());
+      return raw.replace(/([壹贰叁肆伍1-5])([A-Za-z])/g, (m, h, r) => (HALL_NUMBER_TO_CHAR[h] || h) + r.toUpperCase()).replace(/-[A-Za-z](?=[0-9])/g, '-');
     }
+
     function parseBooth(raw) {
       raw = String(raw || '').trim().replace(/\s+/g, '');
       if (/^创\d+/.test(raw)) { return { type: 'creator', hall: 2, number: Number((raw.match(/\d+/) || ['0'])[0]), raw, label: raw } }
