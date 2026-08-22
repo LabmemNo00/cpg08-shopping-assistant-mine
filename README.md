@@ -51,7 +51,7 @@
 
 ### iPhone 安装与离线使用
 
-1. 首次安装时连接网络，使用 Safari 打开 [iPhone 离线版安装入口](https://riiiiiii.github.io/cpg08-shopping-assistant/index_ios.html)。
+1. 首次安装时连接网络，使用 Safari 打开 [iPhone 离线版安装入口](https://LabmemNo00.github.io/cpg08-shopping-assistant/index_ios.html)。
 2. 打开右上角“设置”，等待“安装与离线”显示“缓存已就绪”。
 3. 点击 Safari 的“分享”按钮，选择“添加到主屏幕”。
 4. 回到主屏幕，从新生成的 `CPG08` 图标启动应用。
