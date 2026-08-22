@@ -2341,9 +2341,9 @@
       raw = String(raw || '').trim().replace(/\s+/g, '');
       if (/^创\d+/.test(raw)) { return { type: 'creator', hall: 2, number: Number((raw.match(/\d+/) || ['0'])[0]), raw, label: raw } }
       const enterprise = raw.toUpperCase().match(/^(?:叁)?(CPC|企)(\d{1,2})$/); if (enterprise) { const number = Number(enterprise[2]), num = String(number).padStart(2, '0'), code = enterprise[1] === 'CPC' ? 'CPC' + num : num; return { type: 'enterprise', hall: 3, number, code, raw, label: enterprise[1] === 'CPC' ? code : '企' + num } }
-      const refs = [...raw.matchAll(/([壹贰叁肆伍1-5])([A-Z])([0-9]{2})/g)];
+      const refs = [...raw.matchAll(/([壹贰叁肆伍1-5])([A-Za-z])([0-9]{2})/gi)];
       if (!refs.length) return { type: 'unknown', hall: null, raw, label: raw };
-      const hall = HALL_CHARS[refs[0][1]], row = refs[0][2]; let nums = refs.map(m => Number(m[3]));
+      const hall = HALL_CHARS[refs[0][1]], row = refs[0][2].toUpperCase(); let nums = refs.map(m => Number(m[3]));
       const range = raw.match(/-([A-Z])?([0-9]{2})/); if (range) nums.push(Number(range[2]));
       nums = [...new Set(nums)].sort((a, b) => a - b); const start = Math.min(...nums), end = Math.max(...nums);
       return { type: 'standard', hall, row, start, end, raw, label: row + String(start).padStart(2, '0') + (end > start ? '–' + String(end).padStart(2, '0') : '') };
