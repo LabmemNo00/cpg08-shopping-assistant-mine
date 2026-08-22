@@ -243,4 +243,5 @@ iPhone 离线版只在首次安装和准备缓存时需要网络，Wishlist 不�
 
 ## 作者
 
-小红书：[TIMINGGGGG](https://www.xiaohongshu.com/user/profile/630a9dbb000000001200e9b1)
+原作者小红书：[TIMINGGGGG](https://www.xiaohongshu.com/user/profile/630a9dbb000000001200e9b1)
+
